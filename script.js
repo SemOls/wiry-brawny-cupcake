@@ -1,27 +1,34 @@
-/*
-This is your site JavaScript code - you can add interactivity and carry out processing
-- Initially the JS writes a message to the console, and moves a button you can add from the README
-*/
+let colors = ["#2d1850", "#5b108b", "#a454a1"]
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
+gsap.from(".link", {opacity:0, duration:2, delay:1, stagger:.6})
+gsap.from(".choco", {opacity:0, y:300, duration: 1})
+gsap.from(".btn", {y:30, opacity:0, duration:3, delay:3})
 
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function() {
-    // The JS works in conjunction with the 'dipped' code in style.css
-    btn.classList.toggle("dipped");
-  };
+gsap.to(".image", {rotation:360,x:400, duration:1, delay:.4})
+gsap.to(".par1", {x:300,duration:1,delay:1.5, opacity:1})
+
+gsap.to(".box", {x:400,duration:1.5, rotation:360,stagger:1})
+gsap.to(".par2", {x:50,duration:1,delay:1.5, backgroundColor: function(i){
+    return colors[i%3]
 }
 
-// This is a single line JS comment
-/*
-This is a comment that can span multiple lines 
-- use comments to make your own notes!
-*/
+})
+gsap.from(".btn1", {x:500, opacity:0, duration:3, delay:3})
+
+let move =153
+gsap.to(".box1", {duration:1.5, delay:1.5, x: function(i){
+    if (i%2 ===1) {
+        return - move
+    }
+    else {return move}}
+})
+
+let moves=40
+gsap.to(".par3", {ease:"bounce",duration:2, delay:1.5, stagger:.3, y: function(I){
+    if(I%2===1) {
+        return moves
+    }
+    else return - moves
+}
+
+})
