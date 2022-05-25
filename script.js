@@ -10,10 +10,8 @@ gsap.to(".par1", {x:100,duration:1,delay:1.5, opacity:1})
 gsap.to(".box", {x:100,duration:1.5, rotation:360,stagger:1})
 gsap.to(".par2", {x:50,duration:1,delay:1.5, backgroundColor: function(i){
     return colors[i%3]
-}
-
-})
-gsap.to(".btn1", {x:130, opacity:1, duration:3, delay:3})
+}})
+gsap.from(".btn1", {x:100, opacity:0, duration:3, delay:3})
 
 let move =153
 gsap.to(".box1", {duration:1.5, delay:1.5, x: function(i){
