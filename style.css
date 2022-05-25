@@ -109,7 +109,7 @@ h1{
     border-radius: 5%;
     width: max-content;
     margin: 20px;
-   
+   opacity: 0;
 }
 
 .par3 {
@@ -130,11 +130,9 @@ h1{
         height: 300px;
     }
     .box {
-    width: 250px;
-    height: 150px;
+   
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-   
-    }
+       }
 }

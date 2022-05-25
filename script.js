@@ -4,16 +4,16 @@ gsap.from(".link", {opacity:0, duration:2, delay:1, stagger:.6})
 gsap.from(".choco", {opacity:0, y:300, duration: 1})
 gsap.from(".btn", {y:30, opacity:0, duration:3, delay:3})
 
-gsap.to(".image", {rotation:360,x:400, duration:1, delay:.4})
-gsap.to(".par1", {x:300,duration:1,delay:1.5, opacity:1})
+gsap.to(".image", {rotation:360,x:100, duration:1, delay:.4})
+gsap.to(".par1", {x:100,duration:1,delay:1.5, opacity:1})
 
-gsap.to(".box", {x:400,duration:1.5, rotation:360,stagger:1})
+gsap.to(".box", {x:100,duration:1.5, rotation:360,stagger:1})
 gsap.to(".par2", {x:50,duration:1,delay:1.5, backgroundColor: function(i){
     return colors[i%3]
 }
 
 })
-gsap.from(".btn1", {x:500, opacity:0, duration:3, delay:3})
+gsap.to(".btn1", {x:130, opacity:1, duration:3, delay:3})
 
 let move =153
 gsap.to(".box1", {duration:1.5, delay:1.5, x: function(i){
