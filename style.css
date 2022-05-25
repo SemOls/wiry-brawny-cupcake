@@ -125,4 +125,16 @@ h1{
         width: 500px;
         height: 400px;
     }
+  .image{
+        width: 400px;
+        height: 300px;
+    }
+    .box {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+    }
 }
